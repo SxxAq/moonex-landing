@@ -23,13 +23,12 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1a2747] via-[#0A0F1C] to-[#0A0F1C] opacity-50"></div>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 shadow-lg">
-        <h2 className="text-5xl font-bold text-center mb-12 font-display">
-          <span className="text-yellow-400">FAQs</span>
-        </h2>
-
+    <section className="px-6 p-8 bg-gray-800/30 backdrop-blur-xl rounded-xl max-w-7xl w-[90%] mx-auto text-white mb-20 relative">
+      <div className="absolute top-0 left-30 md:w-56 md:h-56 w-36 h-48 sm:w-48 sm:h-48 sm:block rounded-7xl bg-[#EDD955]/30 blur-3xl" />
+      <h2 className="text-5xl font-bold text-center mb-12 font-display">
+        <span className="text-yellow-400">FAQs</span>
+      </h2>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-12 shadow-lg">
         <div className=" ">
           <Accordion
             type="single"

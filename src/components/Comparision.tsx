@@ -1,65 +1,61 @@
 import { Check, X } from "lucide-react";
-const comparisonPoints = [
-  "1 . Point no one",
-  "2 . Point no two this",
-  "2 . Point no two this",
-  "2 . Point no two this",
-  "2 . Point no two this",
-];
+import React from "react";
+export default function Comparison() {
+  const comparisonPoints = [
+    "1 . Point no one",
+    "2 . Point no two this",
+    "2 . Point no two this",
+    "2 . Point no two this",
+    "2 . Point no two this",
+  ];
 
-export default function ComparisonSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1a2747] via-[#0A0F1C] to-[#0A0F1C] opacity-50" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="text-5xl font-bold mb-16 font-display text-left">
-          Why <span className="text-yellow-400">MoonEX</span> ?
-        </h2>
-
-        <div className="grid grid-cols-3 gap-0">
-          <div>
-            <h3 className="text-2xl font-display text-yellow-400 mb-8">
+    <div className="px-6 py-20 overflow-hidden max-w-7xl mx-auto">
+      <h2 className="text-4xl text-white font-bold text-center sm:text-left mb-12">
+        Why <span className="text-yellow-400">MoonEX</span> ?
+      </h2>
+      <div className="absolute lg:left-[580px] md:left-[350px] sm:left-[200px] sm:top-[1000px] left-16 top-[1300px] w-56 h-56 sm:w-96 sm:h-96 rounded-7xl bg-[#EDD955]/20 blur-3xl " />
+      <div className="sm:mx-auto bg-gray-800/30 backdrop-blur-xl rounded-xl p-4 sm:p-12 max-w-7xl ">
+        <div className="grid grid-cols-3 ">
+          <div className="text-xl font-bold border-r border-gray-800">
+            <h3 className="text-sm md:text-2xl font-display text-yellow-400">
               Comparison
             </h3>
-            {comparisonPoints.map((point, index) => (
-              <div
-                key={index}
-                className="py-6 border-t border-gray-800/30 text-gray-400 pr-4"
-              >
-                {point}
-              </div>
-            ))}
           </div>
-
-          <div>
-            <div className="flex items-center h-[40px] mb-8">
-              <img src="/moonex-full.png" alt="MoonEX" className="h-16" />{" "}
-            </div>
-            {comparisonPoints.map((_, index) => (
-              <div
-                key={index}
-                className="py-6 border-t border-gray-800/30 flex items-center justify-center"
-              >
-                <Check className="text-green-400 w-6 h-6" strokeWidth={2.5} />
-              </div>
-            ))}
+          <div className="text-center border-r border-gray-800">
+            <img
+              alt="Moonex Logo"
+              className="sm:h-16 object-cover h-7 mx-auto mb-2"
+              src="/moonex-full.png"
+            />
           </div>
-
-          <div>
-            <div className="flex items-center h-[40px] mb-8">
-              <img src="/uniswap.png" alt="MoonEX" className="h-10" />{" "}
-            </div>
-            {comparisonPoints.map((_, index) => (
-              <div
-                key={index}
-                className="py-6 border-t border-gray-800/30 flex items-center justify-center"
-              >
-                <X className="text-red-400 w-6 h-6" strokeWidth={2.5} />
-              </div>
-            ))}
+          <div className="text-center">
+            <img
+              alt="Uniswap Logo"
+              className="md:h-10 object-cover h-5 xs:h-8 mx-auto mb-2"
+              src="/uniswap.png"
+            />
           </div>
+          {comparisonPoints.map((point, index) => (
+            <React.Fragment key={`point-${index}`}>
+              <div className="py-4 border-t border-r border-gray-800 text-gray-400 text-xs xs:text-sm sm:text-lg">
+                <ol type="1">
+                  <li>{point}</li>
+                </ol>
+              </div>
+              <div className="py-4 border-t border-r border-gray-800 text-center">
+                <Check
+                  strokeWidth={4}
+                  className="inline-block text-[#B2FFAC]"
+                />
+              </div>
+              <div className="py-4 border-t border-gray-800 text-center">
+                <X strokeWidth={4} className="inline-block text-[#FF5050]" />
+              </div>
+            </React.Fragment>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

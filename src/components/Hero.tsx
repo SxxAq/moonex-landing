@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen py-24 overflow-hidden">
+    <section className="relative min-h-screen py-16 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1a2747] via-[#0A0F1C] to-[#0A0F1C] opacity-50"></div>
+      <div className="absolute bottom-40 right-8 sm:w-80 sm:h-80 w-60 h-60 rounded-7xl bg-[#EDD955]/20 blur-3xl" />
+      <div className="absolute top-52 left-4 md:w-100 md:h-100 w-60 h-60 sm:w-80 sm:h-80 hidden sm:block rounded-7xl bg-[#EDD955]/20 blur-3xl" />
       {/* Orbital paths */}
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -43,9 +44,9 @@ export default function HeroSection() {
       <motion.img
         src="/sphere.png"
         alt=""
-        className="absolute top-[20%] right-[10%] w-64 h-64 "
+        className="absolute top-[30%] right-[10%] w-64 h-64 "
         initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 0.8, scale: 1 }}
+        animate={{ opacity: 0.7, scale: 1 }}
         transition={{
           duration: 0.8,
           delay: 0.3,
@@ -53,7 +54,7 @@ export default function HeroSection() {
         }}
       />
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 relative z-10">
+      <div className="max-w-7xl mx-auto mt-24 px-4 sm:px-6 lg:px-8 pt-32 relative z-10">
         <motion.div
           className="max-w-2xl"
           initial={{ opacity: 0, y: 20 }}
