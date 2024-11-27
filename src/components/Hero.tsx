@@ -54,7 +54,7 @@ export default function HeroSection() {
         }}
       />
       {/* Content */}
-      <div className="max-w-7xl mx-auto mt-24 px-4 sm:px-6 lg:px-8 pt-32 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:mt-24 sm:px-6 lg:px-8 pt-16 md:pt-32 relative z-10">
         <motion.div
           className="max-w-2xl"
           initial={{ opacity: 0, y: 20 }}

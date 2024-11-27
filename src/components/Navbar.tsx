@@ -15,7 +15,7 @@ export default function NavBar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 w-full z-50 bg-[#0A0F1C]/80 backdrop-blur-sm border-b border-gray-800/20"
+      className="fixed top-0 w-full z-50 bg-[#0A0F1C]/20 backdrop-blur-sm border-b border-gray-800/20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -100,7 +100,7 @@ export default function NavBar() {
           transition={{ duration: 0.3 }}
           className="md:hidden bg-[#0A0F1C] border-b border-gray-800/20"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="p-2 space-y-1 sm:px-3">
             <a
               href="/"
               className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400 hover:bg-gray-800/30 transition-colors"
