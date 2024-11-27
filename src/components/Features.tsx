@@ -33,7 +33,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-[#0A0F1C] py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1a2747] via-[#0A0F1C] to-[#0A0F1C] opacity-50"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-5xl font-bold text-center mb-16 font-display">

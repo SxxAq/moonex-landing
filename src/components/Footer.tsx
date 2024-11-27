@@ -1,4 +1,4 @@
-import { Send, Twitter, MessageCircle } from "lucide-react";
+import { Send, Twitter } from "lucide-react";
 import { FaReddit } from "react-icons/fa";
 
 export default function Footer() {
