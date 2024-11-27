@@ -1,35 +1,32 @@
 import { Button } from "@/components/ui/button";
 
-const Hero = () => {
+export default function HeroSection() {
   return (
-    <div className="relative py-20 px-6 lg:px-20">
-      <div className="max-w-3xl">
-        <h1 className="text-5xl font-bold mb-4">
-          Trusted Multi-Chain
-          <span className="text-yellow-400"> DEX Platform</span>
-        </h1>
-        <p className="text-xl mb-8">
-          Trade, earn, and own crypto on the all-in-one multi-chain DEX
-        </p>
-        <div className="space-x-4">
-          <Button className="bg-yellow-400 text-black hover:bg-yellow-500">
-            Connect Wallet
-          </Button>
-          <Button
-            variant="outline"
-            className="text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black"
-          >
-            Trade Crypto
-          </Button>
+    <section className="relative min-h-screen pt-20 overflow-hidden">
+      {/* Decorative elements */}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+        <div className="relative z-10 max-w-2xl">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Trusted Multi-Chain
+            <span className="block text-yellow-400">DEX Platform</span>
+          </h1>
+          <p className="text-lg text-gray-400 mb-8">
+            Trade, earn, and own crypto on the all-in-one multi-chain DEX
+          </p>
+          <div className="flex space-x-4">
+            <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold">
+              Connect Wallet
+            </Button>
+            <Button
+              variant="outline"
+              className="text-white border-white hover:bg-white/10"
+            >
+              Trade Crypto
+            </Button>
+          </div>
         </div>
       </div>
-      <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
-        <div className="w-64 h-64 bg-yellow-400 rounded-full opacity-50 absolute top-20 right-20"></div>
-        <div className="w-2 h-2 bg-white rounded-full absolute top-40 left-40"></div>
-        <div className="w-2 h-2 bg-white rounded-full absolute bottom-40 right-60"></div>
-      </div>
-    </div>
+    </section>
   );
-};
-
-export default Hero;
+}
